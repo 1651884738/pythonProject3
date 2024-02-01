@@ -218,3 +218,5 @@ for i in range(1, 10):
         k = i * j
         print(f"{i} * {j} = {k}", end="\t")
     print("\r\n")
+
+    # 12
