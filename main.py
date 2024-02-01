@@ -151,6 +151,70 @@ print(l)
 l.pop(0)
 print(l)
 # 删除值
-l.remove(4) # 不是删除所有的4
+l.remove(4)  # 不是删除所有的4
 # l.remove(4)
 print(len(l))
+# 列表中的数据类型不需要相同, 但不推荐这么写
+data1 = [1, 2, [3, 4], "ni hao", 7.99]
+print(data1)
+print(data1[2][1])
+
+# 7.1 把data2中的数据由小到大排列
+data2 = [11, 42, 43, 45, 656, 12, 232, 34, 5, 676, 23, 34569, 56, 78, 98]
+data2.sort()  # 从小到大
+print(data2)
+data2.sort(reverse=True)  # 由大到小
+print(data2)
+# 切片 这个区间是左闭右开的 >> data2[2:6]
+data3 = data2[2:6]  # 表示将data2[2]、data[3]、data[4]、data[5] 四个元素赋值给data3
+print(data3)
+data4 = data2[2:7:2]  # 隔一个取一个
+print(data4)
+
+# 判断数据是否存在
+print(45 in data2)
+
+# 元组 即不能被修改的列表,内部""数据地址""不能被修改
+data5 = (1, 2, 3, 4, 5, 6)
+print(type(data5))
+print(4 in data5)
+print(len(data5))
+
+# 集合 {}
+data6 = {23, 45, 67, 78, 90}
+data7 = {23, 45, 68, 79, 91}
+print(type(data6))
+# 增删查
+data6.add(9)
+print(data6)
+data6.remove(23)
+print(data6)
+print(9 in data6)
+# 集合之间的运算，交集，并集，减法
+print(data6.intersection(data7))
+print(data6.union(data7))
+print(data6.difference())
+
+# 8.字典 键值对
+info = {"第一组": {"上": 23, "中": 34, "下": 89}, "第二组": {"上": 23, "中": 34, "下": 89}}
+print(info["第二组"]["上"])
+for w in info:
+    print(w)
+
+for w in info["第一组"]:
+    print(w)  # 打印 key
+
+for w in info["第一组"].values():
+    print(w)  # 打印 value
+
+for w in info["第一组"].items():
+    print(w)  # 打印整体
+# 9.字符串
+
+
+# 打印九九乘法表
+for i in range(1, 10):
+    for j in range(1, i + 1):
+        k = i * j
+        print(f"{i} * {j} = {k}", end="\t")
+    print("\r\n")
