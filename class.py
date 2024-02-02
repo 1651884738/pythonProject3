@@ -10,6 +10,9 @@ class People:
     def bark(self):
         print(f"{self.name} says 666!")
 
+    def test(self, string):
+        print(f"{self.name} says %s" % string)
+
 
 a = People("niko", 25)
 
@@ -17,3 +20,4 @@ print(a.age)
 print(a.name)
 
 a.bark()
+a.test("ni hao")
