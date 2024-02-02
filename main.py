@@ -209,8 +209,50 @@ for w in info["第一组"].values():
 
 for w in info["第一组"].items():
     print(w)  # 打印整体
-# 9.字符串
 
+# 9.字符串
+# 定义一个字符串有三种方式：
+str1 = '这是一个字符串'
+str2 = "这是一个字符串"
+str3 = """ 
+这是
+一个
+分行的
+字符串
+"""
+print(str1)
+print(str2)
+print(str3)
+
+# 字符串的一些操作  类似于列表
+print(len(str1))  # 取长度
+print(str1[-1])  # 打印末尾，每一个字符都有其对应的下标
+print(str1[:3])
+
+# 修改
+str4 = str1.replace("这是", "哈哈哈")
+print(str4)
+# find 查找字符， split 分割
+
+# 字符串的加法和乘法
+str5 = str1 + str2 + "加法"
+print(str5)
+
+str6 = "你好" * 6
+print(str6)
+
+# 格式化字符串
+# 占位符法 : %d %s %f
+name = "Mr.Wang"
+haoma = 23
+str_1 = "你好%s,您的号码是%d" % ("Mr.Wang", 23)
+print(str_1)
+# format 式
+str_2 = "你好{},您的号码是{}".format(name, haoma)
+print(str_2)
+# f-string 式
+str_3 = f"你好{name},您的号码是{haoma}"
+print(str_3)
 
 # 打印九九乘法表
 for i in range(1, 10):
@@ -218,5 +260,3 @@ for i in range(1, 10):
         k = i * j
         print(f"{i} * {j} = {k}", end="\t")
     print("\r\n")
-
-    # 12
