@@ -21,3 +21,5 @@ print(a.name)
 
 a.bark()
 a.test("ni hao")
+
+# TODO: 封装和多态、类的属性、classmethod装饰器、装饰器的原理、自定义模块与__main__、文件读写、with的原理
