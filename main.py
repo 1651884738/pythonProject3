@@ -260,3 +260,39 @@ for i in range(1, 10):
         k = i * j
         print(f"{i} * {j} = {k}", end="\t")
     print("\r\n")
+
+
+# 函数
+def add1(n, m):
+    return n + m
+
+
+# 重新 增加注解
+# 声明一个函数 add ，它有两个int类型的参数，返回值也是int类型
+def add2(n: int, m: int) -> int:
+    return n + m
+
+
+print(add2(4, 5))
+
+
+# 判断一个数是否为水仙花数
+# 如 153 = 1*1*1 + 5*5*5 + 3*3*3
+
+def test1(n: int):
+    if n > 999 or n < 99:
+        return 0
+    a: int = n % 10
+    b: int = ((n % 100) / 10).__int__()
+    c: int = (n / 100).__int__()
+    num = a ** 3 + b ** 3 + c ** 3
+    if num == n:
+        return n
+    else:
+        return 0
+
+
+for i in range(1, 1000):
+    num = test1(i)
+    if num != 0:
+        print("这是一个水仙花数：", num)
