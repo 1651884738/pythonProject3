@@ -15,3 +15,26 @@ for w in info["第一组"].values():
 
 for w in info["第一组"].items():
     print(w)  # 打印整体
+
+# 创建一个字典
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+
+# 访问字典中的值
+print(person["name"])  # 输出: Alice
+print(person["age"])  # 输出: 25
+
+# 修改字典中的值
+person["age"] = 26
+print(person["age"])  # 输出: 26
+
+# 添加新的键-值对
+person["gender"] = "female"
+print(person)  # 输出: {'name': 'Alice', 'age': 26, 'city': 'New York', 'gender': 'female'}
+
+# 删除键-值对
+del person["city"]
+print(person)  # 输出: {'name': 'Alice', 'age': 26, 'gender': 'female'}

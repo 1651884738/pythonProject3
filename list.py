@@ -1,4 +1,5 @@
 # 7.列表
+# 列表是一种有序、可变的数据集合，用于存储多个元素
 l = [1, 2, 3, 4, 5]
 l[1] = 3.12
 l[2] = 4
@@ -39,3 +40,24 @@ print(data4)
 
 # 判断数据是否存在
 print(45 in data2)
+
+# 创建一个列表
+fruits = ["apple", "banana", "orange"]
+
+# 访问列表元素
+print(fruits[0])  # 输出: apple
+
+# 修改列表元素
+fruits[1] = "grape"
+print(fruits)  # 输出: ["apple", "grape", "orange"]
+
+# 添加元素到列表末尾
+fruits.append("kiwi")
+print(fruits)  # 输出: ["apple", "grape", "orange", "kiwi"]
+
+# 从列表中移除元素
+fruits.remove("orange")
+print(fruits)  # 输出: ["apple", "grape", "kiwi"]
+
+# 列表切片
+print(fruits[1:3])  # 输出: ["grape", "kiwi"]
